@@ -6,6 +6,7 @@ function createWindow() {
   const win = new BrowserWindow({
     width: 640,
     height: 360,
+    icon: 'assets/icon.ico',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -32,4 +33,5 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
+
 
