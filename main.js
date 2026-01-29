@@ -4,8 +4,8 @@ const crypto = require('crypto');
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 320,
-    height: 240,
+    width: 640,
+    height: 360,
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       contextIsolation: true,
@@ -32,3 +32,4 @@ app.whenReady().then(() => {
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') app.quit();
 });
+
